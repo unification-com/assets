@@ -1,22 +1,24 @@
 # Unification Icons & Logos
 
-A repository containing both hi-res and web optimised icons and logos
+A repository containing hi-res and web optimised icons and logos in PNG format, and SVG logo icons.
 
 ## Contents
 
 ### icons
 
-The `icons` directory contains both `hi-res` images and `web` square & circle icons suitable for web applications.
+The `icons` directory contains `svg`, `hi-res` PNG images and `web` PNG icons of various sizes suitable for web applications.
 
 ### branding
 
-The `branding` directory contains various logos and banners
+The `branding` directory contains various logos and banners in PNG format.
 
 ## Generate Icons
 
-The `generate_icons.sh` script can be uses ImageMagik to generate icons of varying sizes.
+The `generate_icons.sh` script uses ImageMagik to generate PNG format icons of varying sizes from the SVGs.
 
-Images are sourced from `icons/hi-res/icons` and written to `icons/web`
+**Note**: for transparrent backgrounds to work when converting the SVGs to PNGs, Inkscape must be installed.
+
+Images are sourced from `icons/svg` and written to `icons/web`
 
 ```bash
 rm -rf ./icons/web

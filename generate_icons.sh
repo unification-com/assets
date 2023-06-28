@@ -2,10 +2,11 @@
 
 set -eu
 
-SRC_DIR="./icons/hi-res/icons/"
+SRC_DIR="./icons/svg/"
 BASE_DEST_DIR="./icons/web"
 
 TARGET_SIZES=(
+ "2048x2048"
  "1024x1024"
  "1000x1000"
  "512x512"
@@ -48,7 +49,7 @@ function resize_img() {
   for ts in "${TARGET_SIZES[@]}"; do
     printf "   %s\n" "${ts}"
     DEST_IMG="${DIR}/${INFO}_${ts}.png"
-    convert "${SRC}" -resize "${ts}" -define png:color-type=6 "${DEST_IMG}"
+    convert -resize "${ts}" -background none "${SRC}" "${DEST_IMG}"
   done
 
 }
@@ -63,7 +64,7 @@ function proc_img() {
 
   IMG="${1}"
   FILENAME=${IMG##*/}
-  IMG_INFO="${FILENAME%.png}"
+  IMG_INFO="${FILENAME%.svg}"
   SHAPE=$(get_shape_or_colour "${IMG_INFO}" 3)
   COLOUR=$(get_shape_or_colour "${IMG_INFO}" 2)
 
