@@ -14,12 +14,16 @@
        id="linearGradient828">
       <stop
          style="stop-color:#008ed4;stop-opacity:1;"
-         offset="0"
-         id="stop824" />
+         offset="0" />
+      <stop
+         style="stop-color:#008ed4;stop-opacity:1;"
+         offset="0.25" />
       <stop
          style="stop-color:#3a57a6;stop-opacity:1;"
-         offset="1"
-         id="stop826" />
+         offset="0.75" />
+      <stop
+         style="stop-color:#3a57a6;stop-opacity:1;"
+         offset="1" />
     </linearGradient>
     <linearGradient
        xlink:href="#linearGradient828"
